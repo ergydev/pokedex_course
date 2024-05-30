@@ -1,0 +1,10 @@
+<h1>Pokemons</h1>
+<div class="card__list">
+    <div *ngFor="let pokemon of pokemons" (click)="onPokemonClick(pokemon)" class="card__list--item">
+        <div class="card">
+            <img src="{{pokemon.url}}" alt="Image du pokmeon">
+            <h2>{{pokemon.name}}</h2>
+            <p *ngIf="pokemon.isDescriptionDisplayed">{{pokemon.description}}</p>
+        </div>
+    </div>
+</div>
